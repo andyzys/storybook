@@ -17,7 +17,6 @@
 /addons/storysource/ @igor-dv
 /addons/viewport/ @saponifi3d
 
-/app/angular/ @alterx @igor-dv
 /app/polymer/ @ndelangen @naipath @leonrodenburg
 /app/react/ @xavcz @shilman @thomasbertet
 /app/react-native/ @rmevans9 @Gongreg @tmeasday
@@ -26,7 +25,6 @@
 
 /docs/ @ndelangen @shilman
 
-/examples/angular-cli/ @igor-dv @alterx
 /examples/cra-kitchen-sink/ @ndelangen @UsulPro
 /examples/cra-ts-kitchen-sink/ @mucsi96
 /examples/official-storybook/ @UsulPro

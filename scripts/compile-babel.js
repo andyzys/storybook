@@ -4,11 +4,6 @@ const path = require('path');
 const shell = require('shelljs');
 
 function getCommand(watch) {
-  // Compile angular with tsc
-  if (process.cwd().includes(path.join('app', 'angular'))) {
-    return '';
-  }
-
   const babel = path.join(__dirname, '..', 'node_modules', '.bin', 'babel');
 
   const args = [

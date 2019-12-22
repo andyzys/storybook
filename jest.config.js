@@ -30,7 +30,6 @@ module.exports = {
     '<rootDir>/examples/riot-kitchen-sink',
     '<rootDir>/examples/svelte-kitchen-sink',
     '<rootDir>/examples/vue-kitchen-sink',
-    '<rootDir>/examples/angular-cli',
     '<rootDir>/examples/preact-kitchen-sink',
     '<rootDir>/examples/rax-kitchen-sink',
   ],
@@ -53,7 +52,6 @@ module.exports = {
     '/examples/cra-kitchen-sink/src/*',
     '/examples/cra-react15/src/*',
     '/examples/cra-ts-kitchen-sink/src/components/*',
-    '/examples/angular-cli/src/app/*',
   ],
   collectCoverage: false,
   collectCoverageFrom: [

@@ -91,16 +91,6 @@ jobs:
             cd examples/svelte-kitchen-sink
             yarn build-storybook
       - run:
-          name: Build angular-cli
-          command: |
-            cd examples/angular-cli
-            yarn build-storybook
-      - run:
-          name: Build ember-cli
-          command: |
-            cd examples/ember-cli
-            yarn build-storybook
-      - run:
           name: Build polymer-cli
           command: |
             cd examples/polymer-cli
@@ -179,16 +169,6 @@ jobs:
           name: Run svelte kitchen-sink (smoke test)
           command: |
             cd examples/svelte-kitchen-sink
-            yarn storybook --smoke-test --quiet
-      - run:
-          name: Run angular-cli (smoke test)
-          command: |
-            cd examples/angular-cli
-            yarn storybook --smoke-test --quiet
-      - run:
-          name: Run ember-cli (smoke test)
-          command: |
-            cd examples/ember-cli
             yarn storybook --smoke-test --quiet
       - run:
           name: Run polymer-cli (smoke test)

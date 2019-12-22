@@ -1,24 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`inject-decorator injectDecorator option is false - angular does not inject stories decorator after the all "storiesOf" functions 1`] = `
-"import { Component } from '@angular/core';
-import { storiesOf } from '@storybook/angular';
-
-@Component({
-  selector: 'storybook-with-ng-content',
-  template: \`<div style=\\"color: #1e88e5;\\"><ng-content></ng-content></div>\`,
-})
-class WithNgContentComponent {}
-
-storiesOf('Custom|ng-content', module).add('Default', () => ({
-  template: \`<storybook-with-ng-content><h1>This is rendered in ng-content</h1></storybook-with-ng-content>\`,
-  moduleMetadata: {
-    declarations: [WithNgContentComponent],
-  },
-}));
-"
-`;
-
 exports[`inject-decorator injectDecorator option is false - flow does not inject stories decorator after the all "storiesOf" functions 1`] = `
 "// @flow
 import React from 'react';
@@ -56,41 +37,6 @@ class Table extends React.Component<Props, State> {
 const stories = storiesOf('Table', module);
 stories.add('Flow Class', withInfo('Lorum Ipsum Nem')(() => <Table />));
 "
-`;
-
-exports[`inject-decorator injectDecorator option is false - ts does not inject stories decorator after the all "storiesOf" functions 1`] = `
-"import { Component } from '@angular/core';
-import { Store, StoreModule } from '@ngrx/store';
-import { storiesOf, moduleMetadata } from '@storybook/angular';
-
-@Component({
-  selector: 'storybook-comp-with-store',
-  template: '<div>{{this.getSotreState()}}</div>',
-})
-class WithStoreComponent {
-  private store: Store<any>;
-
-  constructor(store: Store<any>) {
-    this.store = store;
-  }
-
-  getSotreState(): string {
-    return this.store === undefined ? 'Store is NOT injected' : 'Store is injected';
-  }
-}
-
-storiesOf('ngrx|Store', module)
-  .addDecorator(
-    moduleMetadata({
-      imports: [StoreModule.forRoot({})],
-      declarations: [WithStoreComponent],
-    })
-  )
-  .add('With component', () => {
-    return {
-      component: WithStoreComponent,
-    };
-  });"
 `;
 
 exports[`inject-decorator injectDecorator option is false does not inject stories decorator after the all "storiesOf" functions 1`] = `
@@ -250,48 +196,6 @@ storiesOf('Addons|Info.GitHub issues', module).add(
 "
 `;
 
-exports[`inject-decorator positive - angular calculates "adds" map 1`] = `
-Object {
-  "custom-ng-content--default": Object {
-    "endBody": Object {
-      "col": 2,
-      "line": 15,
-    },
-    "endLoc": Object {
-      "col": 2,
-      "line": 15,
-    },
-    "startBody": Object {
-      "col": 54,
-      "line": 10,
-    },
-    "startLoc": Object {
-      "col": 43,
-      "line": 10,
-    },
-  },
-}
-`;
-
-exports[`inject-decorator positive - angular injects stories decorator after the all "storiesOf" functions 1`] = `
-"import { Component } from '@angular/core';
-import { storiesOf } from '@storybook/angular';
-
-@Component({
-  selector: 'storybook-with-ng-content',
-  template: \`<div style=\\"color: #1e88e5;\\"><ng-content></ng-content></div>\`,
-})
-class WithNgContentComponent {}
-
-storiesOf('Custom|ng-content', module).addParameters({ storySource: { source: __STORY__, locationsMap: __ADDS_MAP__ } }).addDecorator(withSourceLoader(__STORY__, __ADDS_MAP__,__MAIN_FILE_LOCATION__,__MODULE_DEPENDENCIES__,__LOCAL_DEPENDENCIES__,__SOURCE_PREFIX__,__IDS_TO_FRAMEWORKS__)).add('Default', () => ({
-  template: \`<storybook-with-ng-content><h1>This is rendered in ng-content</h1></storybook-with-ng-content>\`,
-  moduleMetadata: {
-    declarations: [WithNgContentComponent],
-  },
-}));
-"
-`;
-
 exports[`inject-decorator positive - flow calculates "adds" map 1`] = `Object {}`;
 
 exports[`inject-decorator positive - flow injects stories decorator after the all "storiesOf" functions 1`] = `
@@ -354,41 +258,6 @@ Object {
     },
   },
 }
-`;
-
-exports[`inject-decorator positive - ts injects stories decorator after the all "storiesOf" functions 1`] = `
-"import { Component } from '@angular/core';
-import { Store, StoreModule } from '@ngrx/store';
-import { storiesOf, moduleMetadata } from '@storybook/angular';
-
-@Component({
-  selector: 'storybook-comp-with-store',
-  template: '<div>{{this.getSotreState()}}</div>',
-})
-class WithStoreComponent {
-  private store: Store<any>;
-
-  constructor(store: Store<any>) {
-    this.store = store;
-  }
-
-  getSotreState(): string {
-    return this.store === undefined ? 'Store is NOT injected' : 'Store is injected';
-  }
-}
-
-storiesOf('ngrx|Store', module).addParameters({ storySource: { source: __STORY__, locationsMap: __ADDS_MAP__ } }).addDecorator(withSourceLoader(__STORY__, __ADDS_MAP__,__MAIN_FILE_LOCATION__,__MODULE_DEPENDENCIES__,__LOCAL_DEPENDENCIES__,__SOURCE_PREFIX__,__IDS_TO_FRAMEWORKS__))
-  .addDecorator(
-    moduleMetadata({
-      imports: [StoreModule.forRoot({})],
-      declarations: [WithStoreComponent],
-    })
-  )
-  .add('With component', () => {
-    return {
-      component: WithStoreComponent,
-    };
-  });"
 `;
 
 exports[`inject-decorator positive calculates "adds" map 1`] = `

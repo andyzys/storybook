@@ -1,4 +1,6 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
+// eslint-disable-next-line import/extensions
 import { storiesOf } from '@storybook/react';
 
 // For these stories to work, you must build the static version of the
@@ -20,7 +22,6 @@ const style = {
   'cra-ts-kitchen-sink',
   'vue-kitchen-sink',
   'svelte-kitchen-sink',
-  'angular-cli',
   'polymer-cli',
   'mithril-kitchen-sink',
   'html-kitchen-sink',

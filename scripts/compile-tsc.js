@@ -10,17 +10,12 @@ function getCommand(watch) {
 
   /**
    * Only emit declarations if it does not need to be compiled with tsc
-   * Currently, angular and storyshots (that contains an angular component) need to be compiled
+   * Currently, storyshots (that contains an angular component) need to be compiled
    * with tsc. (see comments in compile-babel.js)
    */
-  const isAngular = process.cwd().includes(path.join('app', 'angular'));
   const isStoryshots = process.cwd().includes(path.join('addons', 'storyshots'));
-  if (!isAngular && !isStoryshots) {
+  if (!isStoryshots) {
     args.push('--emitDeclarationOnly --declaration true');
-  }
-
-  if (isAngular) {
-    args.push('--declaration true');
   }
 
   if (watch) {
